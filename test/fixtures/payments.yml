@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  receiver_email: MyString
+  notify_version: MyString
+  transaction_id: MyString
+  parent_txn_id: MyString
+  receipt_id: MyString
+  receiver_email: MyString
+  receiver_id: MyString
+  resend: MyString
+  residence_country: MyString
+  test_ipn: MyString
+  txn_type: MyString
+  verify_sign: MyString
+
+two:
+  receiver_email: MyString
+  notify_version: MyString
+  transaction_id: MyString
+  parent_txn_id: MyString
+  receipt_id: MyString
+  receiver_email: MyString
+  receiver_id: MyString
+  resend: MyString
+  residence_country: MyString
+  test_ipn: MyString
+  txn_type: MyString
+  verify_sign: MyString

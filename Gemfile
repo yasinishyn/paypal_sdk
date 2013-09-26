@@ -5,7 +5,9 @@ gem 'sqlite3'
 gem 'jquery-rails'
 gem 'devise',         '3.0.0'
 gem 'paypal-sdk-adaptivepayments'
+gem 'paypal-sdk-merchant'
 gem 'bootstrap-sass-rails'
+gem 'sidekiq'
 
 gem "better_errors", ">= 0.7.2", :group => :development
 gem "binding_of_caller", ">= 0.7.1", :group => :development

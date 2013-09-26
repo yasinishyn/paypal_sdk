@@ -11,10 +11,11 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @paypal = PaypalInterface.new(@order)
     @paypal.express_checkout
-    if @paypal.response.success?
-      @paypal_url = @paypal.api.express_checkout_url(@paypal.response)
+    if @paypal.express_checkout_response.success?
+      @paypal_url = @paypal.api.express_checkout_url(@paypal.express_checkout_response)
     else
-      flash[:error] = @paypal.error
+      as
+      flash[:error] = @paypal.express_checkout_response
     end
   end
 
@@ -72,4 +73,29 @@ class OrdersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def paid
+    if order = Order.pay(params[:token], params[:PayerID])
+      # success message
+    else
+      # error message
+    end
+    redirect_to orders_path
+  end
+
+  def revoked
+    if order = Order.cancel_payment(params)
+      # set a message for the user
+    end
+    redirect_to orders_path
+  end
+
+  def ipn
+    if payment = Payment.find_by_transaction_id(params[:txn_id])
+      payment.receive_ipn(params)
+    else
+      Payment.create_by_ipn(params)
+    end
+  end
+
 end
