@@ -1,0 +1,29 @@
+test: &default
+
+  # Credentials for REST APIs
+  client_id: AfAHmRAQfJ3dxLdrD9QLLr8UA-TaurwWYKuDvNZf2vGQd5ygWgSCEHunCEgE
+  client_secret: EJJfNRDayH6GrgDviudPECTQiOX1ITjJrbQxh3GLSeiVjdQRmPivgGslmfwm
+
+  # Mode can be 'live' or 'sandbox'
+  mode: sandbox
+
+  # Credentials for Classic APIs
+  app_id: APP-80W284485P519543T
+  # username: yasinishyn.a.n_api1.gmail.com
+  # password: 52WV2HJGVX9DSTKZ
+  # signature: AiPC9BjkCyDFQXbSkoZcgqH3hpacAzq3L0c23kbJoRBzXmidLSpHDd9M
+  # # With Certificate
+  # cert_path: "config/cert_key.pem"
+  sandbox_email_address: yasinishyn.a.n-facilitator@gmail.com
+
+  # # IP Address
+  # ip_address: 127.0.0.1
+  # # HTTP Proxy
+  # http_proxy: http://proxy-ipaddress:3129/
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+  mode: live
