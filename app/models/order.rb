@@ -12,4 +12,9 @@ class Order < ActiveRecord::Base
       false
     end
   end
+
+  def set_payment_token token 
+    self.token = token
+    save
+  end
 end

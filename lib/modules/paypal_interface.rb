@@ -36,16 +36,7 @@ class PaypalInterface
             currencyID: "USD",
             value: "0"
           },
-          PaymentDetailsItem: [{
-            Name: @order.code,
-            Quantity: 1,
-            Amount: {
-              currencyID: "USD",
-              value: @order.total
-            },
-            ItemCategory: "Physical"
-          }],
-          PaymentAction: "Sale"
+          PaymentAction: "Order"
         }]
       }
     })

@@ -14,8 +14,9 @@ class OrdersController < ApplicationController
     if @paypal.express_checkout_response.success?
       @paypal_url = @paypal.api.express_checkout_url(@paypal.express_checkout_response)
     else
-      as
-      flash[:error] = @paypal.express_checkout_response
+      flash[:error] = @paypal.express_checkout_response.errors[0].send :ShortMessage 
+      flash[:error2] = @paypal.express_checkout_response.errors[0].send :LongMessage
+      flash[:error3] = @paypal.express_checkout_response.errors[0].send :ErrorCode
     end
   end
 

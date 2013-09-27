@@ -1,15 +1,15 @@
 test: &default
 
   # Credentials for REST APIs
-  #client_id: AfAHmRAQfJ3dxLdrD9QLLr8UA-TaurwWYKuDvNZf2vGQd5ygWgSCEHunCEgE
-  #client_secret: EJJfNRDayH6GrgDviudPECTQiOX1ITjJrbQxh3GLSeiVjdQRmPivgGslmfwm
-
+  # client_id: AfAHmRAQfJ3dxLdrD9QLLr8UA-TaurwWYKuDvNZf2vGQd5ygWgSCEHunCEgE
+  # client_secret: EJJfNRDayH6GrgDviudPECTQiOX1ITjJrbQxh3GLSeiVjdQRmPivgGslmfwm
+  # endpoint: api.sandbox.paypal.com
   # Mode can be 'live' or 'sandbox'
   mode: sandbox
   app_id: APP-80W284485P519543T
-  username: yasinishyn.a.n_api1.gmail.com
-  password: 52WV2HJGVX9DSTKZ
-  signature: AiPC9BjkCyDFQXbSkoZcgqH3hpacAzq3L0c23kbJoRBzXmidLSpHDd9M
+  username: bussines.mma_api1.gmail.com
+  password: 1380295134
+  signature: ARnjeHWeoKXaXAwibY.wzO2Kj7a1AmuHktvbuGtD4dgBSOMT9ut9MQV6
   # # With Certificate
   # cert_path: "config/cert_key.pem"
   # sandbox_email_address: yasinishyn.a.n-facilitator@gmail.com
